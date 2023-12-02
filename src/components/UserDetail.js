@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/styles.css';
-import { Link, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './UserDetail.css';
+import { FETCHING_ERROR_MESSAGE } from '../constants/errorMessages';
+
 
 const UserDetail = ({ userId }) => {
     const [userData, setUserData] = useState(null);
-    const location = useLocation();
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
-    const referrer = new URLSearchParams(location.search).get('referrer') || '/';
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -33,9 +34,9 @@ const UserDetail = ({ userId }) => {
 
     return (
         <div>
-            <Link to={{ pathname: referrer, state: { referrer } }} className="back-button">
+            <button className="back-button" onClick={() => navigate(-1)}>
                 Back to Article
-            </Link>
+            </button>
             {userData && (
                 <>
                     <h1>{userData.id}</h1>

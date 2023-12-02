@@ -19,7 +19,5 @@ showcasing your ability to handle complex data structures effectively and provid
 a comprehensive user experience.
 
 Your solution should not only meet the technical requirements but also showcase good UI/UX
-practices. While the example pages are provided as attachments for reference, feel free to
-demonstrate your design skills by creating a user-friendly interface that enhances usability and
-engagement. Pay attention to the design, layout, and responsiveness of the application to
+practices. Pay attention to the design, layout, and responsiveness of the application to
 ensure an optimal user experience.

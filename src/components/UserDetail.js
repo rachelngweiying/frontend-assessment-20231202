@@ -33,7 +33,7 @@ const UserDetail = ({ userId }) => {
 
     return (
         <div>
-            <Link to={referrer} className="back-button">
+            <Link to={{ pathname: referrer, state: { referrer } }} className="back-button">
                 Back to Article
             </Link>
             {userData && (
